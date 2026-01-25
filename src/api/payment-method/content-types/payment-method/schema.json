@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_methods",
+  "info": {
+    "singularName": "payment-method",
+    "pluralName": "payment-methods",
+    "displayName": "Payment Method",
+    "description": "Define different payment methods accepted by the store"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true,
+      "unique": true
+    },
+    "general_method_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "CreditDebitCard",
+        "BankTransfer",
+        "OnlineGateway",
+        "Cash",
+        "Other"
+      ]
+    },
+    "public_description": {
+      "type": "richtext"
+    },
+    "internal_instructions": {
+      "type": "text",
+      "private": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "applied_commission_percentage": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100
+    },
+    "applied_fixed_commission": {
+      "type": "decimal",
+      "min": 0
+    },
+    "associated_banks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bank.bank",
+      "inversedBy": "supported_payment_methods"
+    }
+  }
+}

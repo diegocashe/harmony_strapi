@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_customer_addresses",
+  "info": {
+    "displayName": "Address",
+    "description": "Store postal addresses"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "street_number": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "floor_door_additional": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "city": {
+      "type": "string",
+      "default": "San Francisco",
+      "maxLength": 100,
+      "required": false
+    },
+    "postal_code": {
+      "type": "string",
+      "default": "4004",
+      "maxLength": 20,
+      "required": false
+    },
+    "state_province": {
+      "type": "string",
+      "default": "Zulia",
+      "maxLength": 100,
+      "required": false
+    },
+    "country": {
+      "type": "string",
+      "default": "Venezuela",
+      "maxLength": 100,
+      "required": false
+    }
+  }
+}

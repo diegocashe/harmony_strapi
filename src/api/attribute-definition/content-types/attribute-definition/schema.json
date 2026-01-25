@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attribute_definitions",
+  "info": {
+    "singularName": "attribute-definition",
+    "pluralName": "attribute-definitions",
+    "displayName": "Attribute Definition"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

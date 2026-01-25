@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_global_seo_data",
+  "info": {
+    "displayName": "seo",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string",
+      "default": "meta title",
+      "maxLength": 250
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

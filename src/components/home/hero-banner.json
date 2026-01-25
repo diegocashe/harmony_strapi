@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_home_hero_banners",
+  "info": {
+    "displayName": "hero_banner",
+    "icon": "house"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Be Aesthetic Now<br />with Harmony",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "Descubre nuestra colección de moda estética y minimalista.",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "grid",
+        "polaroid"
+      ]
+    },
+    "assets": {
+      "type": "component",
+      "component": "home.assets",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

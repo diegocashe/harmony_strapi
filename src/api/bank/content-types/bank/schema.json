@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banks",
+  "info": {
+    "singularName": "bank",
+    "pluralName": "banks",
+    "displayName": "Bank",
+    "description": "Store information about banking entities"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true,
+      "unique": true
+    },
+    "identifier_code": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "supported_payment_methods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::payment-method.payment-method",
+      "mappedBy": "associated_banks"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "usd",
+        "bs"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_variant_attribute_definition_variant_attribute_select_options",
+  "info": {
+    "displayName": "variant attribute select options",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "color_hexadecimal": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

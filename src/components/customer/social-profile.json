@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_customer_social_profiles",
+  "info": {
+    "displayName": "Social Profile",
+    "description": "Store links to customer's social media profiles"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "Other"],
+      "required": true
+    },
+    "profile_url": {
+      "type": "string",
+      "required": true,
+      "maxLength": 500
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "store_configurations",
+  "info": {
+    "singularName": "store-configuration",
+    "pluralName": "store-configurations",
+    "displayName": "Store Configuration",
+    "description": "General store settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "store_name": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "contact_email": {
+      "type": "email"
+    },
+    "contact_phone": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "main_currency": {
+      "type": "string",
+      "default": "EUR",
+      "maxLength": 10
+    },
+    "currency_symbol": {
+      "type": "string",
+      "default": "€",
+      "maxLength": 5
+    },
+    "store_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "store_tax_address": {
+      "type": "component",
+      "component": "customer.address",
+      "repeatable": false
+    },
+    "configured_payment_methods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment-method.payment-method"
+    },
+    "bcv": {
+      "type": "decimal",
+      "private": true,
+      "required": true,
+      "default": 104.5
+    },
+    "usdt": {
+      "type": "decimal",
+      "private": true,
+      "required": true,
+      "default": 130.2
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sale_sale_items",
+  "info": {
+    "displayName": "Sale Item",
+    "description": "Detail of each product within a sale"
+  },
+  "options": {},
+  "attributes": {
+    "product_ref": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "required": true
+    },
+    "sold_quantity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "unit_sale_price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "product_name_sale": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "product_sku_sale": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "variant_details_sale": {
+      "type": "string",
+      "maxLength": 500
+    }
+  }
+}

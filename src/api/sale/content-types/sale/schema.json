@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "singularName": "sale",
+    "pluralName": "sales",
+    "displayName": "Sale",
+    "description": "Record a simple sales transaction"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "custom_sale_id": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "sale_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "products_subtotal_amount": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "payment_commission_amount": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0
+    },
+    "total_sale_amount": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "external_payment_reference": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "sale_notes": {
+      "type": "text"
+    },
+    "sale_customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "customer_sales"
+    },
+    "used_payment_method": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment-method.payment-method",
+      "required": true
+    },
+    "transaction_bank": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bank.bank"
+    },
+    "sold_products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sale.sale-item",
+      "required": true
+    }
+  }
+}

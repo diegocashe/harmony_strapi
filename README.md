@@ -1,3 +1,14 @@
+# ⚠️ REPO EN PAUSA — harmony_strapi
+
+> **Propósito:** Base limpia con Strapi actualizado para unificar todos los plugins de `harmony_back` en un solo plugin `harmony`.
+>
+> **Plan pendiente:**
+> - Migrar `strapi-sales-manager` → plugin `harmony`
+> - Migrar `csv-import` → plugin `harmony`
+> - Migrar content-types de `harmony_back`
+>
+> **Repo activo mientras tanto:** `/Volumes/diego_dev/Proyects/harmony_back`
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
